@@ -8,8 +8,9 @@ import { NAME_CHAR } from 'xmlchars/xml/1.0/ed5';
 function App() {
   
   const [teamMembers, setTeamMembers] = useState([
-   
   ])
+
+  // const [memberToEdit, setMemberToEdit] = useState();
   return (
     <div className="App">
       <header className="App-header">
@@ -28,7 +29,7 @@ function App() {
       
       < Form setTeamMembers = { setTeamMembers } /> 
       {teamMembers.map(person => <Card person={ person } /> )}
-      < Card person={{name: 'Michael Demery', email: 'areUasleep@yeah.com', role: 'Project Manager'}} />  
+      < Card person={{id: 0, name: 'Michael Demery', email: 'areUasleep@yeah.com', role: 'Project Manager'}} />  
       </header>
     </div>
   );
