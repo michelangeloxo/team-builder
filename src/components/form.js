@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
+import { precompile } from 'handlebars';
 
 const Form = (props) => {
-const [person, setPerson] = useState({name: "", email: "", role: ""}); 
+    const { setTeamMembers } = props;
+    const [person, setPerson] = useState({name: "", email: "", role: ""}); 
 const handleSubmit = event => {
     event.preventDefault();
-    console.log(person); 
+    setTeamMembers(people => [...people, person]); 
+    setPerson({name: "", email: "", role: ""}); 
 };
 return (
 <form onSubmit={handleSubmit}>

@@ -6,10 +6,9 @@ import Form from './components/form';
 import { NAME_CHAR } from 'xmlchars/xml/1.0/ed5';
 
 function App() {
-  const { setTeamMembers} = props;
+  
   const [teamMembers, setTeamMembers] = useState([
-    {name: 'Riff Haus', email: 'Psych@wifi.com', role: 'Mind Reader'},
-    {name: 'Marlee Bob', email: 'stayTrue@nah.com', role: 'Peace Maker'},
+   
   ])
   return (
     <div className="App">
@@ -29,7 +28,7 @@ function App() {
       
       < Form setTeamMembers = { setTeamMembers } /> 
       {teamMembers.map(person => <Card person={ person } /> )}
-      < Card person={{name: 'Michael Demery', email: 'braveheart@yeah.com', role: 'Project Manager'}} />  
+      < Card person={{name: 'Michael Demery', email: 'areUasleep@yeah.com', role: 'Project Manager'}} />  
       </header>
     </div>
   );
